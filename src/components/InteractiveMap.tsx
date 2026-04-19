@@ -21,7 +21,7 @@ interface InteractiveMapProps {
 
 // Token (Manter ou Mover para variáveis de ambiente)
 // Recomenda-se mover este token para uma variável de ambiente (ex: process.env.NEXT_PUBLIC_MAPBOX_TOKEN)
-const MAPBOX_TOKEN = import.meta.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+const MAPBOX_TOKEN = import.meta.env.VITE_PUBLIC_MAPBOX_TOKEN;
   
 
 export const InteractiveMap = ({
