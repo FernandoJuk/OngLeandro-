@@ -1,4 +1,17 @@
+# Local env files (Contém suas chaves do Mapbox e Supabase - NUNCA SUBIR)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependências
+node_modules/
+
+# Produção / Build
+dist/
+dist-ssr/
+out/
 
 # Logs
 logs
@@ -9,18 +22,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# IDE / Editores
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript / Vite Cache
+.next/
+.vite/
+*.tsbuildinfo
+
+# Supabase (Configurações locais de banco)
+.supabase/
