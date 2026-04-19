@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system for "Para Quem Precisa" - Donation platform
+   Warm, trustworthy palette: teal/green primary, orange accent
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 168 60% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 96%;
+    --secondary-foreground: 210 20% 15%;
+
+    --muted: 40 20% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 28 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 10% 90%;
+    --input: 210 10% 90%;
+    --ring: 168 60% 38%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(168 60% 38%), hsl(28 85% 55%));
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 168 60% 38%;
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 20% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 168 55% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 28 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 168 55% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 168 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Map markers for ONG locations */
+.property-marker {
+  background-color: hsl(168, 60%, 38%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, z-index, box-shadow;
+  transform: scale(1);
+}
+
+.property-marker.marker-selected {
+  border: 2px solid hsl(168, 60%, 38%);
+  background-color: white !important;
+  color: hsl(168, 60%, 38%) !important;
+}
+
+.property-marker:hover {
+  transform: scale(1.1);
+  z-index: 999999 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-trigger:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-trigger:hover .card-details {
+  opacity: 0.8;
+}
